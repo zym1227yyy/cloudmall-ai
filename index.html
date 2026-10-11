@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#164d3d">
+  <meta name="description" content="智能云 AI 商城，发现为生活加分的数码与居家好物。电商在线销售系统课程演示。">
+  <title>智能云 AI 商城 · 让好物更懂生活</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" aria-hidden="true"><defs>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 3h2l2.5 12h11l2-9H6M8 19h.01M18 19h.01"/><circle cx="8" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3 9 5v10l-9 5-9-5V8l9-5Zm-9 5 9 5 9-5M12 13v10M7.5 5.5l9 5v4"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 9 3v6c0 5-9 9-9 9S3 17 3 12V6l9-3Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 13v-2a8 8 0 0 1 16 0v2M4 12H2v7h5v-7H4Zm16 0h2v7h-5v-7h3ZM20 19v2h-7"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+  </defs></svg>
+  <div class="announcement"><span>日常有新意，好物有心意</span><button id="claimCoupon">新人专享 ¥30 优惠券 <span>→</span></button></div>
+  <header class="header">
+    <div class="header-inner">
+      <a href="#home" class="brand" aria-label="智能云商城首页"><span class="brand-mark">云</span><span>智能云<span class="brand-ai">AI</span><small>CLOUDMALL</small></span></a>
+      <nav aria-label="主导航"><a href="#home" data-nav="home">首页</a><a href="#products" data-nav="products">全部好物</a><a href="#new" data-nav="new">新品上市<span class="nav-dot"></span></a><a href="#orders" data-nav="orders">我的订单</a><a href="#admin" data-nav="admin" class="admin-link" hidden>管理后台</a></nav>
+      <form id="searchForm" class="search"><svg class="icon"><use href="#i-search"/></svg><input id="searchInput" aria-label="搜索商品" placeholder="搜索你心仪的好物" autocomplete="off"><button type="submit" aria-label="提交搜索">↵</button></form>
+      <div class="header-actions"><button id="accountButton" class="icon-button" aria-label="登录账户"><svg class="icon"><use href="#i-user"/></svg><span id="accountLabel">登录</span></button><button id="cartButton" class="icon-button cart-button" aria-label="打开购物车"><svg class="icon"><use href="#i-cart"/></svg><span id="cartCount" class="counter">0</span></button></div>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"></main>
+  <footer><div class="footer-top"><a href="#home" class="brand"><span class="brand-mark">云</span><span>智能云<span class="brand-ai">AI</span><small>CLOUDMALL</small></span></a><p>用心挑选，让每一天都值得期待。</p><div><button data-action="about">关于商城</button><button data-action="help">购物帮助</button><button data-action="demo">演示说明</button></div></div><div class="footer-bottom"><span>© 2026 智能云 AI 电商在线销售系统</span><span>课程演示版 · 模拟交易 · 数据保存在当前浏览器</span></div></footer>
+  <button id="assistantButton" class="assistant-fab"><svg class="icon"><use href="#i-spark"/></svg><span>选购助手</span><span class="online-dot"></span></button>
+  <div id="overlay" class="overlay" hidden></div>
+  <aside id="drawer" class="drawer" aria-label="购物车" hidden></aside>
+  <dialog id="modal"></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
